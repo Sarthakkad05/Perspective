@@ -40,23 +40,66 @@ uv run main.py
 ```
 ---
 
-## Architecture Components
 
-### 1. Frontend Layer
-- **Next.js UI**: A sleek, responsive interface that displays content alongside counter perspectives.
+## Architecture Diagram
 
-### 3. Core Backend
-- **FastAPI Server**: A high-performance API server handling requests, content analysis, and response delivery.
-- **Content Analyzer**: Processes incoming articles or posts to identify the dominant narrative.
-- **Counter-Narrative Engine**: Uses advanced AI and NLP techniques to generate alternative perspectives and reasoned analyses.
 
-### 4. AI & NLP Integration
-- **LLM Service**: Leverages large language models (e.g., OpenAI, custom models) to generate detailed counterarguments.
-- **LangChain & Langgraph**: Frameworks to manage chains of reasoning and workflow orchestration for coherent narrative generation.
+```mermaid
+graph TB
+    %% Define Subgraphs with Colors and Text Styles
+    subgraph Client Side
+        style UI fill:#FFDDC1,stroke:#FF6600,stroke-width:2px,color:#000,font-weight:bold
+        UI[Next.js UI]
+    end
 
-### 5. Data Storage
-- **VectorDB**: A vector database for storing semantic embeddings to efficiently retrieve and compare content.
+    subgraph Server Side
+        style API fill:#D1E8FF,stroke:#005BBB,stroke-width:2px,color:#000,font-weight:bold
+        style Analyzer fill:#D1E8FF,stroke:#005BBB,stroke-width:2px,color:#000,font-weight:bold
+        style CNEngine fill:#D1E8FF,stroke:#005BBB,stroke-width:2px,color:#000,font-weight:bold
+        style Context fill:#D1E8FF,stroke:#005BBB,stroke-width:2px,color:#000,font-weight:bold
+        API[FastAPI Server]
+        Analyzer[Content Analyzer]
+        CNEngine[Counter-Narrative Engine]
+        Context[Context Manager]
 
+    end
+
+    subgraph AI & NLP Layer
+        style LLM fill:#E6FFCC,stroke:#66BB66,stroke-width:2px,color:#000,font-weight:bold
+        style LangChain fill:#E6FFCC,stroke:#66BB66,stroke-width:2px,color:#000,font-weight:bold
+        style Langgraph fill:#E6FFCC,stroke:#66BB66,stroke-width:2px,color:#000,font-weight:bold
+        LLM[LLM Service]
+        LangChain[LangChain]
+        Langgraph[Langgraph]
+    end
+
+    subgraph Data Storage
+        style VectorDB fill:#FFDDEE,stroke:#CC3366,stroke-width:2px,color:#000,font-weight:bold
+        VectorDB[(Vector Database)]
+    end
+
+    %% Define Connections with Labels
+    style Browser fill:#FFFF99,stroke:#FFAA00,stroke-width:2px,color:#000,font-weight:bold
+    Browser -->|User Interaction| UI
+    UI -->|Requests| API
+    API -->|Process| Analyzer
+    Analyzer -->|Analysis| CNEngine
+    CNEngine -->|Generates| LLM
+    LLM -->|Uses| LangChain
+    LLM -->|Uses| Langgraph
+    API -->|Manages| Context
+    CNEngine -->|Stores| VectorDB
+    API -->|Responses| UI
+
+```
+### Components
+
+- **1. Frontend (Next.js)** – User interface for submitting articles and viewing generated perspectives
+- **2. FastAPI Backend** – Handles requests, orchestration, and API responses
+- **3. Content Analyzer** – Extracts key points and identifies narrative bias
+- **4. Counter-Narrative Engine** – Generates alternative viewpoints using AI
+- **5. LLM Service (LangChain/LangGraph)** – Runs reasoning workflows and text generation
+- **6. Vector Database** – Stores embeddings for semantic retrieval
 ---
 
 ## Technical Stack
