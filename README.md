@@ -7,7 +7,7 @@ Perspective-AI is an AI-powered web platform that analyzes articles and generate
 &nbsp;&nbsp;&nbsp;<a href="https://discord.gg/hjUhu33uAn"><img src="https://github.com/user-attachments/assets/3ed93273-5055-4532-a524-87a337a4fbba" height="40"></a>
 
 1. First, join the **[Discord Server](https://discord.gg/hjUhu33uAn) (Go to Projects->Perspective)** to chat with everyone.
-2. For detailed setup instructions, coding guidelines, and the contribution process, please check out our [CONTRIBUTING.md](./CONTRIBUTING.md) file.
+2. For detailed setup instructions, coding guidelines, and the contribution process, please check out our [ARCHITECTURE.md](./CONTRIBUTING.md) file.
 
 ## Architecture
 
@@ -43,7 +43,7 @@ Perspective-AI is an AI-powered web platform that analyzes articles and generate
 - Vector search for semantic retrieval and exploration  
 - Clean, responsive web interface for seamless reading
 
-## 🧩 Technical Stack
+## Technical Stack
 
 <table>
 <tr>
@@ -117,5 +117,9 @@ Perspective-AI is an AI-powered web platform that analyzes articles and generate
 </tr>
 
 </table>
+
+---
+
+Our Code of Conduct: [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)
 
 
