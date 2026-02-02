@@ -1,44 +1,42 @@
 # Perspective-AI
 ![Perspective banner](frontend/public/perspective_banner.jpg)
 
-### Table of Contents
-- [Perspective-AI](#perspective-ai)
-    - [Table of Contents](#table-of-contents)
-  - [System Overview](#system-overview)
-    - [High-Level Concept](#high-level-concept)
-  - [Architecture Components](#architecture-components)
-    - [1. Frontend Layer](#1-frontend-layer)
-    - [3. Core Backend](#3-core-backend)
-    - [4. AI \& NLP Integration](#4-ai--nlp-integration)
-    - [5. Data Storage](#5-data-storage)
-  - [Technical Stack](#technical-stack)
-    - [Frontend Technologies](#frontend-technologies)
-    - [Backend Technologies](#backend-technologies)
-    - [I Integration](#i-integration)
-  - [Core Features](#core-features)
-    - [1. Counter-Perspective Generation](#1-counter-perspective-generation)
-    - [2. Reasoned Thinking](#2-reasoned-thinking)
-    - [3. Updated Facts](#3-updated-facts)
-    - [4. Seamless Integration](#4-seamless-integration)
-    - [5. Real-Time Analysis](#5-real-time-analysis)
-  - [Data Flow \& Security](#data-flow--security)
-  - [Setup \& Deployment](#setup--deployment)
-    - [Frontend Setup](#frontend-setup)
-    - [Backend Setup](#backend-setup)
-  - [Architecture Diagram](#architecture-diagram)
-  - [Expected Outcomes](#expected-outcomes)
-  - [Required Skills](#required-skills)
-
----
-
 ## System Overview
 
-Perspective-AI is designed to combat the echo chambers created by personalized content algorithms. It actively curates counterarguments and alternative narratives from credible sources alongside the content you usually see. Whether it’s a news article, blog post, or social media update, Perspective-AI analyzes the existing narrative and presents a balanced, in-depth counter-perspective. This approach not only challenges your current viewpoints but also helps broaden your understanding of complex issues—all in real time.
+Perspective-AI is an AI-powered web app that analyzes online articles and generates fact-based counter-perspectives to reduce bias and echo chambers. Using NLP, RAG, and LLMs, it extracts key points, verifies information, and presents balanced alternative viewpoints in real time.
 
-### High-Level Concept
 Imagine having a smart, opinionated friend who isn’t afraid to challenge your beliefs with well-articulated counterpoints—that’s Perspective-AI in a nutshell!
 
 ---
+## Setup & Deployment
+
+### Prerequisites
+
+- Node.js 18+
+- Python 3.10+
+- uv package manager → https://docs.astral.sh/uv/
+- API keys:
+  - Groq/OpenAI API key
+  - Pinecone API key
+  - Google Custom Search API key
+  - (Optional) HuggingFace access token
+
+### Frontend Setup
+
+```bash
+cd frontend
+cp .env.example .env
+npm install
+npm run dev
+```
+### Backend Setup
+
+```bash
+cd backend
+cp .env.example .env
+uv sync
+uv run main.py
+```
 
 ## Architecture Components
 
