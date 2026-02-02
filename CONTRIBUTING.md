@@ -38,7 +38,6 @@ npm install
 ```bash
 cp .env.example .env
 ```
-Edit the .env file
 
 3. Start development server
 ```bash
@@ -47,4 +46,52 @@ npm run dev
 
 Frontend runs at:
 http://localhost:3000
+
+
+## Backend (FastAPI + uv)
+
+The backend uses uv for dependency management.
+
+1. Install uv: https://docs.astral.sh/uv/
+
+2. Install dependencies:
+```bash
+cd backend
+uv sync
+```
+
+3. Configure environment
+```bash
+cp .env.example .env
+```
+
+4. Fill required keys:
+```bash
+OPENAI_API_KEY=
+GROQ_API_KEY=
+PINECONE_API_KEY=
+SEARCH_KEY=
+PORT=8000
+```
+
+5. Run server
+```bash
+uv run main.py
+```
+
+Backend runs at:
+http://localhost:8000
+
+
+
+# 🚀 How to Contribute
+
+1. Pick an issue and get it assigned  
+2. Fork the repository  
+3. Create a new branch  
+4. Make your changes and test locally  
+5. Push your branch and open a Pull Request  
+
+Please keep PRs small, focused, and follow the existing code style.
+
 
