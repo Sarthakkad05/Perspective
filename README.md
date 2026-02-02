@@ -1,261 +1,121 @@
-<div align="center">
-
 # Perspective 
-Fact-checked counter-perspectives powered by LLMs
 
-</div>
+Perspective-AI is an AI-powered web platform that analyzes articles and generates fact-checked counter-perspectives using LLMs to reduce bias and promote balanced understanding.
 
-![Perspective banner](frontend/public/perspective_banner.jpg)
+# Want to Contribute? 😄
 
----
+&nbsp;&nbsp;&nbsp;<a href="https://discord.gg/hjUhu33uAn"><img src="https://github.com/user-attachments/assets/3ed93273-5055-4532-a524-87a337a4fbba" height="40"></a>
 
-## System Overview
+1. First, join the **[Discord Server](https://discord.gg/hjUhu33uAn) (Go to Projects->Perspective)** to chat with everyone.
+2. For detailed setup instructions, coding guidelines, and the contribution process, please check out our [CONTRIBUTING.md](./CONTRIBUTING.md) file.
 
-Perspective-AI is designed to combat the echo chambers created by personalized content algorithms. It actively curates counterarguments and alternative narratives from credible sources alongside the content you usually see. Whether it’s a news article, blog post, or social media update, Perspective-AI analyzes the existing narrative and presents a balanced, in-depth counter-perspective. This approach not only challenges your current viewpoints but also helps broaden your understanding of complex issues—all in real time.
+## Architecture
 
-## High-Level Concept
-Imagine having a smart, opinionated friend who isn’t afraid to challenge your beliefs with well-articulated counterpoints—that’s Perspective-AI in a nutshell!
+### Frontend
+- Next.js: Web UI framework for building the responsive client interface  
+- TailwindCSS: Styling and layout system  
 
----
+### Backend (Python)
+- FastAPI: API server handling requests and routing  
+- Content Analyzer: Extracts and processes article text  
+- Counter-Narrative Engine: Generates alternative perspectives using AI  
+- Context Manager: Manages request flow and reasoning state  
 
-## Quick Setup
+### AI & NLP
+- LLMs (OpenAI/Groq/others): Generate counterarguments and summaries  
+- LangChain: Prompt chaining and reasoning workflows  
+- LangGraph: Graph-based orchestration of AI pipelines  
+- Fact Checking: Web search + source verification  
 
-### Prerequisites
+### Data & Storage
+- Vector Database (Pinecone/others): Stores embeddings for semantic search  
+- Embeddings: Enables similarity matching and fast retrieval
 
-- Node.js 18+
-- Python 3.10+
-- uv package manager → https://docs.astral.sh/uv/
-- API keys:
-  - Groq/OpenAI API key
-  - Pinecone API key
-  - Google Custom Search API key
-  - (Optional) HuggingFace access token
 
-### Frontend Setup
+  
+## Features
 
-```bash
-cd frontend
-cp .env.example .env
-npm install
-npm run dev
-```
-### Backend Setup
+- AI-generated counter-perspectives for articles and online content  
+- Bias detection and balanced narrative analysis  
+- Fact-checking with trusted sources and real-time updates  
+- Structured reasoning using LLM chains and workflows  
+- FastAPI + Next.js powered real-time processing  
+- Vector search for semantic retrieval and exploration  
+- Clean, responsive web interface for seamless reading
 
-```bash
-cd backend
-cp .env.example .env
-uv sync
-uv run main.py
-```
----
-
-## Tech Stack
+## 🧩 Technical Stack
 
 <table>
 <tr>
-<th align="center">Frontend</th>
-<th align="center">Backend</th>
-<th align="center">AI & NLP</th>
-<th align="center">Database</th>
+<th align="left">Component</th>
+<th align="left">Technology</th>
 </tr>
 
 <tr>
-<td align="center">
-  <img src="https://cdn.simpleicons.org/nextdotjs/000000" height="40"/><br/>
-  <b>Next.js</b>
-</td>
-
-<td align="center">
-  <img src="https://cdn.simpleicons.org/fastapi/009688" height="40"/><br/>
-  <b>FastAPI</b>
-</td>
-
-<td align="center">
-  <img src="https://cdn.simpleicons.org/openai/412991" height="40"/><br/>
-  <b>OpenAI / LLM APIs</b>
-</td>
-
-<td align="center">
-<img src="https://www.pinecone.io/images/pinecone-logo.svg" height="30"/><br/>
-  <b>Vector DB</b>
-</td>
-</tr>
-
-
-<tr>
-<td align="center">
-  <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" height="40"/><br/>
-  <b>TailwindCSS</b>
-</td>
-
-<td align="center">
-  <img src="https://cdn.simpleicons.org/python/3776AB" height="40"/><br/>
-  <b>Python</b>
-</td>
-
-<td align="center">
-  <img src="https://cdn.simpleicons.org/langchain/1C3C3C" height="40"/><br/>
-  <b>LangChain / LangGraph</b>
-</td>
-
-<td align="center">
-  Embeddings Storage
-</td>
+<td><b>Frontend Framework</b></td>
+<td>Next.js</td>
 </tr>
 
 <tr>
-<td align="center">
-  Responsive UI
-</td>
+<td><b>Styling</b></td>
+<td>TailwindCSS</td>
+</tr>
 
-<td align="center">
-  REST APIs
-</td>
+<tr>
+<td><b>Backend API</b></td>
+<td>FastAPI</td>
+</tr>
 
-<td align="center">
-  Prompt Engineering
-</td>
+<tr>
+<td><b>Programming Language</b></td>
+<td>Python</td>
+</tr>
 
-<td align="center">
-  Semantic Search
-</td>
+<tr>
+<td><b>LLM Provider</b></td>
+<td>OpenAI / Groq</td>
+</tr>
+
+<tr>
+<td><b>AI Orchestration</b></td>
+<td>LangChain</td>
+</tr>
+
+<tr>
+<td><b>Workflow Engine</b></td>
+<td>LangGraph</td>
+</tr>
+
+<tr>
+<td><b>Vector Database</b></td>
+<td>Pinecone (or any VectorDB)</td>
+</tr>
+
+<tr>
+<td><b>Fact Checking</b></td>
+<td>Google Custom Search API</td>
+</tr>
+
+<tr>
+<td><b>Package Manager (Frontend)</b></td>
+<td>npm</td>
+</tr>
+
+<tr>
+<td><b>Package Manager (Backend)</b></td>
+<td>uv</td>
+</tr>
+
+<tr>
+<td><b>Deployment</b></td>
+<td>Vercel</td>
+</tr>
+
+<tr>
+<td><b>Containerization</b></td>
+<td>Docker (optional)</td>
 </tr>
 
 </table>
 
----
 
-## Core Features
-
-### 1. Counter-Perspective Generation
-- **What It Does**: Instantly displays counterarguments to the main narrative.
-- **How It Works**: Analyzes content to identify biases and generates alternative viewpoints.
-
-
-### 2. Reasoned Thinking
-- **What It Does**: Breaks down narratives into logical, connected arguments.
-- **How It Works**: Uses chain-of-thought prompting and connected fact analysis.
-
-### 3. Updated Facts
-- **What It Does**: Provides real-time updates and the latest facts along with counter-narratives.
-- **How It Works**: Continuously pulls data from trusted sources and updates the insights.
-
-### 4. Seamless Integration
-- **What It Does**: Integrates effortlessly with existing news, blogs, and social media platforms.
-- **How It Works**: Uses custom integration modules and API endpoints.
-
-### 5. Real-Time Analysis
-- **What It Does**: Generates insights instantly as you browse.
-- **How It Works**: Employs real-time processing powered by advanced AI.
-
----
-
-
-
-
-## Architecture Diagram
-
-
-```mermaid
-graph TB
-    %% Define Subgraphs with Colors and Text Styles
-    subgraph Client Side
-        style UI fill:#FFDDC1,stroke:#FF6600,stroke-width:2px,color:#000,font-weight:bold
-        UI[Next.js UI]
-    end
-
-    subgraph Server Side
-        style API fill:#D1E8FF,stroke:#005BBB,stroke-width:2px,color:#000,font-weight:bold
-        style Analyzer fill:#D1E8FF,stroke:#005BBB,stroke-width:2px,color:#000,font-weight:bold
-        style CNEngine fill:#D1E8FF,stroke:#005BBB,stroke-width:2px,color:#000,font-weight:bold
-        style Context fill:#D1E8FF,stroke:#005BBB,stroke-width:2px,color:#000,font-weight:bold
-        API[FastAPI Server]
-        Analyzer[Content Analyzer]
-        CNEngine[Counter-Narrative Engine]
-        Context[Context Manager]
-
-    end
-
-    subgraph AI & NLP Layer
-        style LLM fill:#E6FFCC,stroke:#66BB66,stroke-width:2px,color:#000,font-weight:bold
-        style LangChain fill:#E6FFCC,stroke:#66BB66,stroke-width:2px,color:#000,font-weight:bold
-        style Langgraph fill:#E6FFCC,stroke:#66BB66,stroke-width:2px,color:#000,font-weight:bold
-        LLM[LLM Service]
-        LangChain[LangChain]
-        Langgraph[Langgraph]
-    end
-
-    subgraph Data Storage
-        style VectorDB fill:#FFDDEE,stroke:#CC3366,stroke-width:2px,color:#000,font-weight:bold
-        VectorDB[(Vector Database)]
-    end
-
-    %% Define Connections with Labels
-    style Browser fill:#FFFF99,stroke:#FFAA00,stroke-width:2px,color:#000,font-weight:bold
-    Browser -->|User Interaction| UI
-    UI -->|Requests| API
-    API -->|Process| Analyzer
-    Analyzer -->|Analysis| CNEngine
-    CNEngine -->|Generates| LLM
-    LLM -->|Uses| LangChain
-    LLM -->|Uses| Langgraph
-    API -->|Manages| Context
-    CNEngine -->|Stores| VectorDB
-    API -->|Responses| UI
-
-```
-### Components
-
-- **1. Frontend (Next.js)** – User interface for submitting articles and viewing generated perspectives
-- **2. FastAPI Backend** – Handles requests, orchestration, and API responses
-- **3. Content Analyzer** – Extracts key points and identifies narrative bias
-- **4. Counter-Narrative Engine** – Generates alternative viewpoints using AI
-- **5. LLM Service (LangChain/LangGraph)** – Runs reasoning workflows and text generation
-- **6. Vector Database** – Stores embeddings for semantic retrieval
----
-
-
-
-## Data Flow & Security
-
-```mermaid
-sequenceDiagram
-    %% Define Participants
-    participant U as User
-    participant F as Frontend
-    participant B as Backend
-    participant AI as AI Service
-    participant D as Data Storage
-
-    %% Interaction Flow
-    U->>F: Request/View Content
-    F->>B: Forward Request
-    B->>AI: Analyze Content & Generate Counter Perspective
-    AI->>B: Return Counter Analysis   
-    B->>F: Deliver Results
-    F->>U: Display Balanced Insights
-
-    %% Notes for Clarity
-    Note over AI: AI generates counter analysis
-    Note over B: Backend processes logic
-    Note over F: Frontend updates UI
-```
----
-
-## Expected Outcomes
-
-- **Less Bias in Narratives**: Break out of echo chambers and question prevailing narratives.
-- **Wider Perspectives**: Broaden your understanding of complex issues.
-- **Better Discourse**: Enable balanced, informed discussions.
-- **Sharper Analysis**: Improve critical thinking by comparing connected facts and counter-facts.
-
----
-
-## Required Skills
-
-- **Frontend Development**:  Experience with Next.js and modern UI frameworks.
-- **Backend Development**: Proficiency in Python and FastAPI.
-- **AI & NLP**: Familiarity with LangChain, Langgraph, and prompt engineering techniques.
-- **Database Management**: Knowledge of vector databases system.
-
----
