@@ -8,6 +8,7 @@ Perspective-AI is an AI-powered web app that analyzes online articles and genera
 Imagine having a smart, opinionated friend who isn’t afraid to challenge your beliefs with well-articulated counterpoints—that’s Perspective-AI in a nutshell!
 
 ---
+
 ## Setup & Deployment
 
 ### Prerequisites
@@ -37,6 +38,7 @@ cp .env.example .env
 uv sync
 uv run main.py
 ```
+---
 
 ## Architecture Components
 
