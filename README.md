@@ -11,7 +11,7 @@ Perspective-AI is an AI-powered web platform that analyzes articles and generate
 
 ## Architecture
 
-For detailed Architecture, please check out our [ARCHITECTURE.md](.ARCHITECTURE/.md) 
+For detailed Architecture, please check out our [ARCHITECTURE.md](./ARCHITECTURE.md) 
 
 ### Frontend
 - Next.js: Web UI framework for building the responsive client interface  
