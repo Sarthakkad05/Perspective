@@ -36,7 +36,7 @@ npm install
 
 2. Configure environment
 ```bash
-cp .env.example .env
+cp .example.env .env
 ```
 
 3. Start development server
@@ -62,12 +62,11 @@ uv sync
 
 3. Configure environment
 ```bash
-cp .env.example .env
+cp .example.env .env
 ```
 
 4. Fill required keys:
 ```bash
-OPENAI_API_KEY=
 GROQ_API_KEY=
 PINECONE_API_KEY=
 SEARCH_KEY=
